@@ -331,6 +331,40 @@ main {
   background: #020617;
 }
 
+/* Favicon-Card */
+.favicon-card {
+  grid-column: 1 / -1; /* über die ganze Breite im Grid */
+}
+
+.favicon-layout {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.favicon-preview-wrap {
+  flex: 0 0 auto;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.favicon-preview {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 0.9rem;
+}
+
+.favicon-text p {
+  margin-top: 0;
+}
+
+.favicon-text ul {
+  margin-top: 0.4rem;
+}
+
 /* Footer */
 .footer {
   margin-top: 2.25rem;
@@ -361,12 +395,30 @@ main {
   .grid {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .favicon-card {
+    grid-column: auto;
+  }
+
+  .favicon-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
+
 @media (max-width: 600px) {
   .page {
     padding-inline: 0.9rem;
   }
   .hero-box {
     border-radius: 1.25rem;
+  }
+
+  .favicon-layout {
+    flex-direction: column;
+  }
+  .favicon-preview {
+    width: 56px;
+    height: 56px;
   }
 }
