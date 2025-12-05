@@ -422,3 +422,30 @@ main {
     height: 56px;
   }
 }
+
+.card ul:not(.pill-list):not(.link-list) {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+}
+
+.card ul:not(.pill-list):not(.link-list) li {
+  position: relative;
+  padding-left: 1.4rem;
+  line-height: 1.5;
+}
+
+.card ul:not(.pill-list):not(.link-list) li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  top: 0.12rem;
+  font-size: 0.85rem;
+  color: var(--accent-strong);
+  text-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
+}
+
+.card ul:not(.pill-list):not(.link-list) li + li {
+  margin-top: 0.35rem;
+}
